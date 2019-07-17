@@ -31,6 +31,7 @@ void EXTI_PC2_Config(void)
 void mocbox_GPIO_LED_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOG,ENABLE);
     
     GPIO_InitStructure.GPIO_Pin = LED_MJ_RED_GPIO_PIN;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
@@ -63,13 +64,4 @@ void mocbox_GPIO_LED_Init(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(LED_KY_GRE_GPIO_PORT, &GPIO_InitStructure);
 
-    GPIO_InitStructure.GPIO_Pin = LED_KK_RED_GPIO_PIN;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(LED_KK_RED_GPIO_PORT, &GPIO_InitStructure);
-                
-    GPIO_InitStructure.GPIO_Pin = LED_KK_GRE_GPIO_PIN;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(LED_KK_GRE_GPIO_PORT, &GPIO_InitStructure);
 }
