@@ -31,8 +31,32 @@ void EXTI_PC2_Config(void)
 void mocbox_GPIO_LED_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD,ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE,ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF,ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOG,ENABLE);
-    
+
+    GPIO_InitStructure.GPIO_Pin = LED_VBT_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_VBT_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_Close_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_Close_RED_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_Open_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_Open_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_VBT_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_VBT_RED_GPIO_PORT, &GPIO_InitStructure);
+
     GPIO_InitStructure.GPIO_Pin = LED_MJ_RED_GPIO_PIN;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -63,5 +87,52 @@ void mocbox_GPIO_LED_Init(void)
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(LED_KY_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_KK_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_KK_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_VCC_12V_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_VCC_12V_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_Open_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_Open_RED_GPIO_PORT, &GPIO_InitStructure);
+
+
+    GPIO_InitStructure.GPIO_Pin = LED_PS_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_PS_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+
+    GPIO_InitStructure.GPIO_Pin = LED_CAN_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_CAN_RED_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_BT_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_BT_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_PS_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_PS_RED_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_BC_GRE_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_BC_GRE_GPIO_PORT, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = LED_VANG_RED_GPIO_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(LED_VANG_RED_GPIO_PORT, &GPIO_InitStructure);
 
 }

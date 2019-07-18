@@ -363,15 +363,15 @@
 
 //?????
 //VANG_LED
-#define     LED_VANG_RED_GPIO_PORT                  GPIOE
-#define     LED_VANG_RED_GPIO_PIN                   GPIO_Pin_10
-#define     LED_VANG_RED_OFF()                      GPIO_SetBits(LED_VANG_RED_GPIO_PORT, LED_VANG_RED_GPIO_PIN)
-#define     LED_VANG_RED_ON()                       GPIO_ResetBits(LED_VANG_RED_GPIO_PORT, LED_VANG_RED_GPIO_PIN)
-
 #define     LED_VANG_GRE_GPIO_PORT                  GPIOE
-#define     LED_VANG_GRE_GPIO_PIN                   GPIO_Pin_12
+#define     LED_VANG_GRE_GPIO_PIN                   GPIO_Pin_10
 #define     LED_VANG_GRE_OFF()                      GPIO_SetBits(LED_VANG_GRE_GPIO_PORT, LED_VANG_GRE_GPIO_PIN)
 #define     LED_VANG_GRE_ON()                       GPIO_ResetBits(LED_VANG_GRE_GPIO_PORT, LED_VANG_GRE_GPIO_PIN)
+
+#define     LED_VANG_RED_GPIO_PORT                  GPIOE
+#define     LED_VANG_RED_GPIO_PIN                   GPIO_Pin_12
+#define     LED_VANG_RED_OFF()                      GPIO_SetBits(LED_VANG_RED_GPIO_PORT, LED_VANG_RED_GPIO_PIN)
+#define     LED_VANG_RED_ON()                       GPIO_ResetBits(LED_VANG_RED_GPIO_PORT, LED_VANG_RED_GPIO_PIN)
 
 //PS_LED
 #define     LED_PS_RED_GPIO_PORT                    GPIOE
@@ -407,15 +407,15 @@
 #define     LED_BS_GRE_ON()                         GPIO_ResetBits(LED_BS_GRE_GPIO_PORT, LED_BS_GRE_GPIO_PIN)
 
 //BT_LED
-#define     LED_BT_RED_GPIO_PORT                    GPIOE
-#define     LED_BT_RED_GPIO_PIN                     GPIO_Pin_15
-#define     LED_BT_RED_OFF()                        GPIO_SetBits(LED_BT_RED_GPIO_PORT, LED_BT_RED_GPIO_PIN)
-#define     LED_BT_RED_ON()                         GPIO_ResetBits(LED_BT_RED_GPIO_PORT, LED_BT_RED_GPIO_PIN)
-
 #define     LED_BT_GRE_GPIO_PORT                    GPIOE
-#define     LED_BT_GRE_GPIO_PIN                     GPIO_Pin_13
+#define     LED_BT_GRE_GPIO_PIN                     GPIO_Pin_15
 #define     LED_BT_GRE_OFF()                        GPIO_SetBits(LED_BT_GRE_GPIO_PORT, LED_BT_GRE_GPIO_PIN)
 #define     LED_BT_GRE_ON()                         GPIO_ResetBits(LED_BT_GRE_GPIO_PORT, LED_BT_GRE_GPIO_PIN)
+
+#define     LED_BC_GRE_GPIO_PORT                    GPIOE
+#define     LED_BC_GRE_GPIO_PIN                     GPIO_Pin_13
+#define     LED_BC_GRE_OFF()                        GPIO_SetBits(LED_BC_GRE_GPIO_PORT, LED_BC_GRE_GPIO_PIN)
+#define     LED_BC_GRE_ON()                         GPIO_ResetBits(LED_BC_GRE_GPIO_PORT, LED_BC_GRE_GPIO_PIN)
 
 //???
 #define     LED_MJ_GRE_GPIO_PORT                    GPIOG
@@ -504,15 +504,15 @@
 #define     LED_Close_GRE_ON()                      GPIO_ResetBits(LED_Close_GRE_GPIO_PORT, LED_Close_GRE_GPIO_PIN)
 
 //CANH
-#define     LED_CAN_RED_GPIO_PORT                  GPIOB
-#define     LED_CAN_RED_GPIO_PIN                   GPIO_Pin_15
-#define     LED_CAN_RED_OFF()                      GPIO_SetBits(LED_CAN_RED_GPIO_PORT, LED_CAN_RED_GPIO_PIN)
-#define     LED_CAN_RED_ON()                       GPIO_ResetBits(LED_CAN_RED_GPIO_PORT, LED_CAN_RED_GPIO_PIN)
-
 #define     LED_CAN_GRE_GPIO_PORT                  GPIOB
-#define     LED_CAN_GRE_GPIO_PIN                   GPIO_Pin_13
+#define     LED_CAN_GRE_GPIO_PIN                   GPIO_Pin_15
 #define     LED_CAN_GRE_OFF()                      GPIO_SetBits(LED_CAN_GRE_GPIO_PORT, LED_CAN_GRE_GPIO_PIN)
 #define     LED_CAN_GRE_ON()                       GPIO_ResetBits(LED_CAN_GRE_GPIO_PORT, LED_CAN_GRE_GPIO_PIN)
+
+#define     LED_CAN_RED_GPIO_PORT                  GPIOB
+#define     LED_CAN_RED_GPIO_PIN                   GPIO_Pin_13
+#define     LED_CAN_RED_OFF()                      GPIO_SetBits(LED_CAN_RED_GPIO_PORT, LED_CAN_RED_GPIO_PIN)
+#define     LED_CAN_RED_ON()                       GPIO_ResetBits(LED_CAN_RED_GPIO_PORT, LED_CAN_RED_GPIO_PIN)
 
 
 //POTO
